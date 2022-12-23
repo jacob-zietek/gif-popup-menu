@@ -43,7 +43,6 @@ def fetch_top_gifs(callback):
         tenor_gifs = [x['media'][0] for x in tenor_gifs]
         gifs = tenor_gifs
         
-        print("updating")
         gif1 = ImageTk.PhotoImage(Image.open(urlopen(gifs[0]['tinygif']["preview"])).resize((gif_w, gif_h)))
         gif1Label.configure(image=gif1)
         gif1Label.image = gif1
@@ -69,19 +68,15 @@ def fetch_top_gifs(callback):
         gif6Label.image = gif6
 
 
+# Copy gif url to clipboard after gif is selected
 def copy_to_clipboard(gif_idx):
     if not gifs or gif_idx >= len(gifs): return
     pyperclip.copy(gifs[gif_idx]["gif"]["url"])
     exit(0)
 
-# Create a text variable for searchbar
-#var = StringVar()
-#var.trace_add("write", callback=fetch_top_gifs)
 
-# Create search bar and focus it for quick search
-search = Entry(text="")#, textvariable=var)
+search = Entry(text="")
 search.grid(row=0)
-#search.pack()
 search.focus()
 search.bind('<Return>', fetch_top_gifs)
 
