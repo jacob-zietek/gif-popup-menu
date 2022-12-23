@@ -10,6 +10,7 @@ try:
     from StringIO import StringIO
 except ImportError:
     from io import StringIO
+
 APIKEY = "LIVDSRZULELA"
 LMT = 8
 
@@ -118,10 +119,17 @@ gif5 = ImageTk.PhotoImage(Image.open(urlopen("https://media.tenor.com/846fTf5uEg
 gif5Label = Label(ws, image=gif5)
 gif5Label.grid(column=0, row=3)
 
+
+gif6Label = Label(ws)
+gif6Label.grid(column=1, row=3)
+
+gif6 = gifplay(gif6Label, "https://media.tenor.com/846fTf5uEgcAAAAC/bfb-bfdi.gif")
+
+"""
 gif6 = ImageTk.PhotoImage(Image.open(urlopen("https://media.tenor.com/846fTf5uEgcAAAAC/bfb-bfdi.gif")).resize((gif_w, gif_h)), format="gif")
 gif6Label = Label(ws, image=gif6)
 gif6Label.grid(column=1, row=3)
-
+"""
 
 
 ws.mainloop()
