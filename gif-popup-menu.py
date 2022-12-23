@@ -14,8 +14,8 @@ import pyperclip
 
 APIKEY = "T716TUCVJAOJ"
 LMT = 6
-gif_w = 740//2
-gif_h = 700//3
+gif_w = 745//2
+gif_h = 730//3
 
 
 ws = Tk()
@@ -93,33 +93,27 @@ search.bind('<Return>', fetch_top_gifs)
 
 
 # Set up top 6 gifs
-gif1 = ImageTk.PhotoImage(Image.open(urlopen("https://upload.wikimedia.org/wikipedia/commons/3/3e/Evangelion.png")).resize((gif_w, gif_h)))
-gif1Label = Label(ws, image=gif1)
+gif1Label = Label(ws)
 gif1Label.grid(column=0, row=1)
 gif1Label.bind('<Button-1>', lambda x: copy_to_clipboard(0))
 
-gif2 = ImageTk.PhotoImage(Image.open(urlopen("https://upload.wikimedia.org/wikipedia/commons/3/3e/Evangelion.png")).resize((gif_w, gif_h)))
-gif2Label = Label(ws, image=gif2)
+gif2Label = Label(ws)
 gif2Label.grid(column=1, row=1)
 gif2Label.bind('<Button-1>', lambda x: copy_to_clipboard(1))
 
-gif3 = ImageTk.PhotoImage(Image.open(urlopen("https://upload.wikimedia.org/wikipedia/commons/3/3e/Evangelion.png")).resize((gif_w, gif_h)))
-gif3Label = Label(ws, image=gif3)
+gif3Label = Label(ws)
 gif3Label.grid(column=0, row=2)
 gif3Label.bind('<Button-1>', lambda x: copy_to_clipboard(2))
 
-gif4 = ImageTk.PhotoImage(Image.open(urlopen("https://upload.wikimedia.org/wikipedia/commons/3/3e/Evangelion.png")).resize((gif_w, gif_h)))
-gif4Label = Label(ws, image=gif4)
+gif4Label = Label(ws)
 gif4Label.grid(column=1, row=2)
 gif4Label.bind('<Button-1>', lambda x: copy_to_clipboard(3))
 
-gif5 = ImageTk.PhotoImage(Image.open(urlopen("https://upload.wikimedia.org/wikipedia/commons/3/3e/Evangelion.png")).resize((gif_w, gif_h)))
-gif5Label = Label(ws, image=gif5)
+gif5Label = Label(ws)
 gif5Label.grid(column=0, row=3)
 gif5Label.bind('<Button-1>', lambda x: copy_to_clipboard(4))
 
-gif6 = ImageTk.PhotoImage(Image.open(urlopen("https://upload.wikimedia.org/wikipedia/commons/3/3e/Evangelion.png")).resize((gif_w, gif_h)))
-gif6Label = Label(ws, image=gif6)
+gif6Label = Label(ws)
 gif6Label.grid(column=1, row=3)
 gif6Label.bind('<Button-1>', lambda x: copy_to_clipboard(5))
 
