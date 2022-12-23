@@ -3,13 +3,7 @@ from functools import cache
 import requests
 import json
 from urllib.request import urlopen
-import time
-import _thread
 from PIL import Image, ImageTk
-try:
-    from StringIO import StringIO
-except ImportError:
-    from io import StringIO
 import pyperclip
 
 APIKEY = "T716TUCVJAOJ"
